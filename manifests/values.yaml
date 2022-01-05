@@ -7,7 +7,7 @@ global:
 
 image:
   pullPolicy: IfNotPresent
-  account: 027396584751.dkr.ecr.us-east-1.amazonaws.com/
+  account: 278504326063.dkr.ecr.us-east-1.amazonaws.com/
   repository: k8s-hello-word-flask
   version: main-4d4eb30
 
