@@ -1,0 +1,23 @@
+
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: {{ .Values.global.APP_NAME}}-gateway
+spec:
+  selector:
+    istio: ingressgateway 
+  servers:
+  - hosts:
+    - {{ .Values.global.APP_NAME}}.homolog.aftvrsys.com
+    port:
+      name: http
+      number: 80
+      protocol: HTTP
+    tls:
+      httpsRedirect: true
+  - hosts:
+    - {{ .Values.global.APP_NAME}}.homolog.aftvrsys.com
+    port:
+      name: https
+      number: 443
+      protocol: HTTP

@@ -1,0 +1,26 @@
+global:
+  APP_NAME: k8s-helloword-flask
+  APP_PORT: 5000
+  APP_REPLICAS: 1
+  APP_VERSION: 1.0.0
+
+
+image:
+  pullPolicy: IfNotPresent
+  account: 027396584751.dkr.ecr.us-east-1.amazonaws.com/
+  repository: k8s-hello-word-flask
+  version: main-4d4eb30
+
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "100Mi"
+
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: 5000
+  initialDelaySeconds: 5
+  periodSeconds: 5
