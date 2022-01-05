@@ -34,11 +34,11 @@ jobs:
       run: |
         # Build a docker container and push it to ECR
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$git_hash .
+        tag=$ECR_REGISTRY/$ECR_REPOSITORY:$git_hash
+        docker build -t $tag .
         echo "Pushing image to ECR..."
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$git_hash
-        echo  ${ECR_REPOSITORY}
-        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$git_hash"
+        docker push $tag
+        echo "::set-output name=image::$tags"
         
     - name: Update Version
       run: |
