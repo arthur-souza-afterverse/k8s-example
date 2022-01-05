@@ -28,7 +28,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
-        ECR_REGISTRY: basename `git rev-parse --show-toplevel`
+        ECR_REGISTRY: $(basename `git rev-parse --show-toplevel`)
         ECR_REPOSITORY: ${{github.repository}}
 
       run: |
@@ -53,5 +53,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         commit_message: Version updated
-
-      $(echo $IN | tr ";" "\n")
