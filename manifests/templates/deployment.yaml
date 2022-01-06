@@ -20,7 +20,7 @@ spec:
       serviceAccountName : {{ .Values.global.APP_NAME}}
       containers:
       - name: {{ .Values.global.APP_NAME}}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
+        image: "{{ .Values.image.account }}{{ .Values.image.repository }}:{{ .Values.image.version }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         livenessProbe:
           httpGet:
