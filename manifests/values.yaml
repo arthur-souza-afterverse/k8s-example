@@ -8,8 +8,8 @@ global:
 image:
   pullPolicy: IfNotPresent
   account: 278504326063.dkr.ecr.us-east-1.amazonaws.com/
-  repository: k8s-hello-word-flask
-  version: main-4d4eb30
+  repository: k8s-example-helloword
+  version: f20006e
 
 
 resources:
