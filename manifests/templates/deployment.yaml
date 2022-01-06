@@ -17,8 +17,8 @@ spec:
         app: {{ .Values.global.APP_NAME}}
         version: {{ .Values.global.APP_VERSION}}
     spec:
+      serviceAccountName : {{ .Values.global.APP_NAME}}
       containers:
-        serviceAccountName : {{ .Values.global.APP_NAME}}
       - name: {{ .Values.global.APP_NAME}}
         image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
