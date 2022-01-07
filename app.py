@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def raiz():
-    return "Batatinha inside K8S - Afterverse !!"
+    return "BATATAS inside K8S - Afterverse !!"
 
 
 if __name__ == "__main__":
