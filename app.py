@@ -4,8 +4,8 @@ import os
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return "Flask inside K8S - Afterverse !!"
+def raiz():
+    return "Batatinha inside K8S - Afterverse !!"
 
 
 if __name__ == "__main__":

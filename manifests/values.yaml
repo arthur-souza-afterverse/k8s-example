@@ -1,5 +1,5 @@
 global:
-  APP_NAME: k8s-helloword
+  APP_NAME: batatinha
   APP_PORT: 5000
   APP_REPLICAS: 1
   APP_VERSION: 1.0.0
