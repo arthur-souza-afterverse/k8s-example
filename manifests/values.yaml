@@ -9,7 +9,7 @@ image:
   pullPolicy: IfNotPresent
   account: 278504326063.dkr.ecr.us-east-1.amazonaws.com/
   repository: k8s-example-helloword
-  version: cfd2593
+  version: f588643
 
 
 resources:
